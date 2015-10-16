@@ -16,7 +16,7 @@
     - ` has_many :model, as: :polymorphic_name `
     - example for pictures:
         - ` has_many :pictures, as: :imageable `
-1. If there is a ` has_many :through ` relationship, you'll need to do them like the following... here we have a professor who has many TAs but also once to know which TAs belong to Which Class.
+1. If there is a ` has_many :through ` relationship, you'll need to do them like the following... here we have a professor who has many TAs but also wants to know which TAs belong to Which Class.
     - Polymorphic migration:
     ```
         class CreateTeachingAssistants < ActiveRecord::Migration
@@ -41,7 +41,7 @@
     ```
     - has_many model 1:
     ```
-        class SectionA < ActiveRecord::Base
+        class Course < ActiveRecord::Base
             has_many :teaching_assistants, as: :ta_duty
         end
     ```
@@ -63,8 +63,8 @@
         - creating model name to reference on the spot: ` :course_tas ` and ` :lab_tas `
         - has_many :NEW_MODEL_REFERENCE_NAME, through: :POLYMORIPHIC_MODEL, source: :POLYMORPHIC_NAME, source_type: 'ASSOCIATED_MODEL_THAT_IT_GOES_THROUGH'
 - inverse_of does not work on polymorphic associations
-- t.references
-- can write migration in two ways:
+- ` t.references `
+    - can write migration in two ways:
         - ` _id ` and ` _type `
             ```
                 t.integer :ta_duty_id, index: true
