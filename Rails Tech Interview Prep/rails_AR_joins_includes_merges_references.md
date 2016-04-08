@@ -4,6 +4,8 @@
 ### Each has their OPTIMAL USE CASE, listed at the end.
 
 - Joining Tables
+    1. Note: inside the `joins(...)`, pluralization depends on the association. Inside the `where(...)`, you put the table name of the joins reference.
+       - example inside a belongs_to scope: `joins(:role).where(roles: {name: 'Manager'})`
     1. Using a string SQL Fragment
         ```
         Client.joins('
