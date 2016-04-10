@@ -18,6 +18,15 @@
     - Example:
         - ` Client.where("first_name LIKE '%#{params[:first_Name]}'") `
 
+- Search ` LIKE ` stings
+    - Search with stings similar
+    - putting ` % ` is a wild card and can be put at the begging or end
+      - ` User.where("email LIKE ?", '%@gmail.com') `
+        - Finds all emails ending with "@gmail.com" (case sensitive)
+    - If you want case insensitive search use ` ILIKE `
+      - ` User.where("email ILIKE ?", email) `
+        - Finds all emails ending with "@gmail.com" (case insensitive)
+
 - Using Array Conditions for SQL
     - AR will go through the first element in the conditions value and any additional elements will replace the question marks ` ? ` in the first element
     - NEVER put your arguments directly into the string conditions... puts whole database at risk.
