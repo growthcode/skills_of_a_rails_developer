@@ -73,4 +73,41 @@ Gives us:
 
 
 ## Lesson 2: [Querying belongs_to Associations](https://upcase.com/videos/advanced-querying-belongs-to)
-#### In this exercise, you'll be using ActiveRecord's join and merge methods to query your belongs_to associations in an object-oriented, composable way.
+#### Subqueries
+
+```ruby
+class Location < ActiveRecord::Base
+  def self.billable
+    joins(people: :role).where(roles: { billable: true }).distinct
+  end
+
+  def self.by_region_and_location_name
+    joins(:region).merge(Region.order(:name)).order(:name)
+  end
+end
+```
+
+__This will fail:__
+
+```ruby
+Location.billable.by_region_and_location_name
+```
+
+Many time in DB queries you'll need to run subqueries before you can run secondary queries.
+
+ActiveRecord generates a single query out of the methods you put on it. It doesn't assume anything. AR and DB has constraints to prevent problems.
+
+One constraint is that you have to provide the ` ORDER BY ` fields you want to be main select statement.
+
+When you use ` distinct `, it comes as ` SELECT DISTINCT `.
+
+Order of operations issue... run the ` distinct ` query first, then the ` ORDER BY `
+
+This is done with the AR ` .from(...) ` method.
+
+__This will pass:__
+
+```ruby
+Location.from(Location.billable, :locations).by_region_and_location_name
+```
+
