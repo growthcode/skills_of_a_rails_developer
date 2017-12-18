@@ -54,6 +54,7 @@ group :development do
   gem 'meta_request' # Chrome extension for Rails development
   gem 'rails_db' # Rails Database Viewer and SQL Query Runner
   gem 'traceroute' # A Rake task that helps you find dead routes and unused actions in your Rails
+  gem 'coverband' # new to me... will update after I've used it, adding now to not forget about it
 end
 
 ####### Larger Apps #######
