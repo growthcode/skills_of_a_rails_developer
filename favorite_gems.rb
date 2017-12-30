@@ -47,6 +47,7 @@ gem 'paper_trail'
 gem 'paranoia'
 gem 'rolify' # rolify is best but alternative is cancancan
 gem 'simple_form'
+gem 'unirest' # HTTP api helper I got from mashape.com
 
 ####### Efficiency / Analytics / Refactor #######
 gem 'pghero' # performance dashboard for Postgres
