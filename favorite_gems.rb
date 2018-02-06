@@ -17,6 +17,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rack-mini-profiler', require: false
   gem 'rubocop'
+  gem 'reek' # https://github.com/troessner/reek; code smells
 end
 
 group :test do
