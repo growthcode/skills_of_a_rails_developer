@@ -2,7 +2,7 @@
   - Class defines characteristis of an object like:
     - what it is __attributes__
     - what it can do __methods__
-  - Method exists on a clas and defines what the class can do.
+  - Method exists on a class and defines what the class can do.
   - Encapsulation provieds class moularity and structure of an OOP program.
     - Ideally, the code for a class whould be relatively self contained through encapsulation.
       - Which is the concealment of functional details of a class from other objets that call its methods.
