@@ -72,7 +72,8 @@ __Return A Row When (i.e. `WHERE`) Condition:__
 #### `LIKE` string conditional
 
   - Use `LIKE` in order to search through a text based value.
-  - `LIKE` is _not_ case sensitive
+  - `LIKE` _is_ case sensitive
+  - `ILIKE` _is not_ case sensitive (i.e. insensitive, doesn't care)
   - `SELECT * FROM robots WHERE name LIKE "%Robot%";`
 
   - ` % ` and ` _ ` are two special characters in the `LIKE` syntax
@@ -80,15 +81,15 @@ __Return A Row When (i.e. `WHERE`) Condition:__
     - ` % ` represents 0 or more characters
     - ` _ ` represents 1 character.
 
-  - `LIKE "%SUPER"`, can return:
+  - `ILIKE "%SUPER"`, can return:
     - "SUPER"
     - "Hethe is SUPER"
     - "3... 2... 1... SuPeR"
-  - `LIKE "SUPER%"`
+  - `ILIKE "SUPER%"`
     - "SUPER"
     - "Superman is here to save the day!"
     - "Super Troopers is overrated."
-  - `LIKE "%SUPER%"`
+  - `ILIKE "%SUPER%"`
     - "SUPER"
     - "Hethe is SUPER"
     - "3... 2... 1... SuPeR"
