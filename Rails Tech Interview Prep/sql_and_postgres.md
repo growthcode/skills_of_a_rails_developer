@@ -15,7 +15,7 @@
 
 ## Query syntax
 
-```
+```sql
   SELECT table_column_names
   FROM table_name
     INNER JOIN character_tv_show
