@@ -283,7 +283,7 @@ __Single Inner Join Table__
   - Must provide a column name for the added column
     - `... AS num_legs  ...`
 
-```
+```sql
   CASE
   WHEN *first thing is true*
     THEN *value1*
@@ -296,7 +296,7 @@ __Single Inner Join Table__
   AS *case_column_name*
 ```
 
-```
+```sql
   SELECT
     *,
     CASE
