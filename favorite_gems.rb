@@ -20,6 +20,11 @@ group :development, :test do
   gem 'reek' # https://github.com/troessner/reek; code smells
 end
 
+group :development do 
+  gem 'binding_of_caller' # this with web-console puts binding on error page in develpment
+  gem 'web-console'
+end
+
 group :test do
   gem 'capybara'
   gem 'rspec-rails'
