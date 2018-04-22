@@ -4,7 +4,10 @@ gem 'annotate'
 gem 'attribute_normalizer'
 gem 'awesome_print'
 gem 'colorize','~> 0.7.5'
-gem 'factory_bot'
+
+gem 'factory_bot' # non-rails projects
+gem 'factory_bot_rails' # rails projects
+
 gem 'faker'
 gem 'font-awesome-rails'
 gem 'jquery-rails' # Dropped in Rails 5.1
