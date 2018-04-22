@@ -18,6 +18,8 @@ group :development, :test do
   gem 'rack-mini-profiler', require: false
   gem 'rubocop'
   gem 'reek' # https://github.com/troessner/reek; code smells
+  
+  gem 'rspec-rails' # this needs to be in development group so generators will also make spec files
 end
 
 group :development do 
@@ -27,7 +29,6 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'timecop' # making it simple to test time-dependent code
 end
