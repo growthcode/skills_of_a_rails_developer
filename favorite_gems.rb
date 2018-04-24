@@ -49,8 +49,8 @@ gem 'foreman'
 
 ####### Usually Use #######
 gem 'acts-as-taggable-on'
-gem 'bootstrap-sass', '~> 3.3.7'
-gem 'bootswatch-rails'
+gem 'bootstrap'
+gem 'bootswatch' # https://github.com/mkhairi/bootswatch-sass
 gem 'devise'
 gem 'ejs'
 gem 'paper_trail'
