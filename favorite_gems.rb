@@ -13,6 +13,7 @@ gem 'font-awesome-rails'
 gem 'jquery-rails' # Dropped in Rails 5.1
 gem 'pg'
 gem 'pry-rails'
+gem 'active_link_to' # sets "active" to links if on current page (like for header navs)
 
 group :development, :test do
   gem 'better_errors' # Better error page for Rack apps (doesn't work when you run "Bundle Exec rails s")
