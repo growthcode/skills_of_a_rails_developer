@@ -1,5 +1,5 @@
 ####### Always #######
-gem 'active_model_serializers'
+gem 'fast_jsonapi' # used to use gem 'active_model_serializers'
 gem 'annotate'
 gem 'attribute_normalizer'
 gem 'awesome_print'
