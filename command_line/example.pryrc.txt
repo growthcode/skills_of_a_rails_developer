@@ -1,0 +1,10 @@
+# Define different prompt names and colors for Pry interactive sessions
+# Reference for the colors: https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797 (Replace ESC with \e)
+
+# https://dev.to/thespectator/making-your-rails-console-interesting-pdc
+
+if Rails.env == 'production'
+  Pry.config.prompt_name = "\e[0;31m#{Rails.env.upcase} \e[0m"
+else
+  Pry.config.prompt_name = "\e[0;32m#{Rails.env} \e[0m"
+end

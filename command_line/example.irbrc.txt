@@ -1,0 +1,18 @@
+# Define different prompt names and colors for irb sessions
+# Reference for the colors: https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797 (Replace ESC with \e)
+
+# https://dev.to/thespectator/making-your-rails-console-interesting-pdc
+
+if defined?(Rails)
+  prompt = "\e[0;31m\e\u001b[1m*#{Rails.env.upcase}* \e[0m %N(%m):%03n:%i"
+
+  IRB.conf[:PROMPT][:RAILS] = {
+    PROMPT_I: "#{prompt}> ",
+    PROMPT_N: "#{prompt}> ",
+    PROMPT_S: "#{prompt}* ",
+    PROMPT_C: "#{prompt}? ",
+    RETURN: " => %s\n",
+  }
+
+  IRB.conf[:PROMPT_MODE] = :RAILS
+end
